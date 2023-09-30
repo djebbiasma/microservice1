@@ -1,2 +1,4 @@
-package com.example.microservice1.entity;public class supplier {
+package com.example.microservice1.entity;
+
+public class supplier {
 }
