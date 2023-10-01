@@ -1,20 +1,21 @@
 package com.example.microservice1.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idUser;
+    private String IdUser;
+
     private String name;
+    @Column(unique=true)
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private Role role;
     @OneToMany(mappedBy = "user")
-    private List<company> companies;
+    private List<Company> companies;
 
 }

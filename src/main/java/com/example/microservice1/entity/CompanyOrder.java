@@ -1,8 +1,20 @@
 package com.example.microservice1.entity;
 
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
-public class companyOrder {
+import java.util.Date;
+import java.util.List;
+
+@Entity
+public class CompanyOrder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String IdCompanyOrder;
+    private Date date;
+    private int quantity;
     @ManyToOne
-    private article article;
+    @JoinColumn(name = "article_id")
+    private Article article;
+    @OneToMany(mappedBy = "CompanyOrder")
+    private List<Supplier> suppliers;
 }

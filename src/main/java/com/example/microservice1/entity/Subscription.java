@@ -3,19 +3,19 @@ package com.example.microservice1.entity;
 import jakarta.persistence.*;
 
 import java.util.Date;
-
-public class subscription {
+@Entity
+public class Subscription {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String subscriptionId;
+    private String IdSubscription;
     private Date creationDate;
     private Date EndDate;
 
     @ManyToOne
     @JoinColumn(name = "company_id") // Nom de la colonne dans la table Subscription faisant référence à Company
-    private company company;
+    private Company company;
 
     @OneToOne
     @JoinColumn(name = "subscription_type_id") // Nom de la colonne dans la table Subscription faisant référence à SubscriptionType
-    private subsciptionType subscriptionType;
+    private SubsciptionType subscriptionType;
 }

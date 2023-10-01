@@ -6,7 +6,7 @@ import org.apache.catalina.User;
 import java.util.Date;
 import java.util.List;
 
-public class company {
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String companyId;
@@ -14,9 +14,9 @@ public class company {
     private Date creationDate;
     private Boolean isEnabled;
     @OneToMany(mappedBy = "company")
-    private List<article> articles;
+    private List<Article> articles;
     @OneToMany(mappedBy = "company")
-    private List<subscription> subscriptions;
+    private List<Subscription> subscriptions;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

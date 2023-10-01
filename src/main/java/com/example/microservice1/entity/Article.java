@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-public class article {
+public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String idArticle;
+    private String IdArticle;
 
-    private String idSupplier;
+    private String IdSupplier;
     private String name;
     private String description;
     private int quantity;
@@ -17,11 +17,15 @@ public class article {
 
     @OneToMany(mappedBy = "article")
 
-    private List<companyOrder>Orders;
+    private List<CompanyOrder>Orders;
 
     @ManyToOne
-    @JoinColumn(name = "company_id") // Nom de la colonne dans la table Article faisant référence à Company
-    private company company;
+    @JoinColumn(name = "company_id")
+    private Company company;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+    @OneToMany(mappedBy = "article")
 
-
+    private List<CustomerOrder>CustomerOrders;
 }
