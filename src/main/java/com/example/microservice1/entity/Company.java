@@ -1,23 +1,34 @@
 package com.example.microservice1.entity;
 
 import jakarta.persistence.*;
-import org.apache.catalina.User;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
 
-public class company {
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String companyId;
+    private Long IdCompany;
+
     private String name;
+
     private Date creationDate;
+
     private Boolean isEnabled;
+
     @OneToMany(mappedBy = "company")
-    private List<article> articles;
+    private List<Article> articles;
+
     @OneToMany(mappedBy = "company")
-    private List<subscription> subscriptions;
+    private List<Subscription> subscriptions;
+
     @ManyToOne
-    @JoinColumn(name = "user_id")
     private User user;
 }

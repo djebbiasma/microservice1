@@ -1,4 +1,8 @@
 package com.example.microservice1.entity;
 
-public class Role {
+public enum Role {
+    admin,
+    user,
+    supplier,
+    costumer
 }

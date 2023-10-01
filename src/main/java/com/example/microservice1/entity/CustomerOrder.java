@@ -1,0 +1,26 @@
+package com.example.microservice1.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CustomerOrder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long IdCustomerOrder;
+
+    private String date;
+
+    private int quantity;
+
+    @ManyToOne
+    private Article article;
+
+    @ManyToOne
+    private Customer customer;
+}
