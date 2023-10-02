@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Activity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdActivity;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdActivity;
 
     private String name;
 }

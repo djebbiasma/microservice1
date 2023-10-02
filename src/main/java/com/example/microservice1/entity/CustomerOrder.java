@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CustomerOrder {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdCustomerOrder;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdCustomerOrder;
 
     private String date;
 

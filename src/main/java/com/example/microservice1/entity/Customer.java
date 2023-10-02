@@ -13,8 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdCustomer;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdCustomer;
 
     private String name;
 

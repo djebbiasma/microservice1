@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CompanyOrder {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdCompanyOrder;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdCompanyOrder;
 
     @ManyToOne
     private Article article;

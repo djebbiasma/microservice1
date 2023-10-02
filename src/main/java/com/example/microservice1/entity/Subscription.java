@@ -13,8 +13,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class Subscription {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdSubscription;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdSubscription;
 
     private Date creationDate;
 

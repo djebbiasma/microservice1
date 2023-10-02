@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SubsciptionType {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdSubsciptionType;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdSubsciptionType;
 
     private double amount;
 

@@ -13,8 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Article {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long IdArticle;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String IdArticle;
 
     private long idSupplier;
 
