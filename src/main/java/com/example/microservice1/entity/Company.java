@@ -9,7 +9,7 @@ import java.util.List;
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String companyId;
+    private Long companyId;
     private String name;
     private Date creationDate;
     private Boolean isEnabled;
@@ -18,6 +18,6 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Subscription> subscriptions;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+
     private User user;
 }

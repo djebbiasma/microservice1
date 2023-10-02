@@ -7,7 +7,7 @@ import java.util.List;
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdArticle;
+    private Long IdArticle;
 
     private String IdSupplier;
     private String name;

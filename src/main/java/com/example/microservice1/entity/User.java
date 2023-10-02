@@ -7,7 +7,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdUser;
+    private Long IdUser;
 
     private String name;
     @Column(unique=true)

@@ -7,7 +7,7 @@ import java.util.Date;
 public class CustomerOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdCustomerOrder;
+    private Long IdCustomerOrder;
     private Date date;
     @ManyToOne
     @JoinColumn(name = "Article_id")

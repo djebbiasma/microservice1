@@ -7,7 +7,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdCustomer;
+    private Long IdCustomer;
     private String name;
     private String Country;
     private String PhoneNumber;
@@ -17,6 +17,6 @@ public class Customer {
     @OneToMany(mappedBy = "Customer")
     private List<CustomerOrder> CustomerOrders;
     @ManyToOne
-    @JoinColumn(name = "Activity_id")
+
     private Activity activities;
 }

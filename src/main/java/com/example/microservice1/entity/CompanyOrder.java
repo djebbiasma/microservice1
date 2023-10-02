@@ -9,7 +9,7 @@ import java.util.List;
 public class CompanyOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdCompanyOrder;
+    private Long IdCompanyOrder;
     private Date date;
     private int quantity;
     @ManyToOne

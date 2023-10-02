@@ -8,7 +8,7 @@ import jakarta.persistence.OneToOne;
 public class SubsciptionType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdSubsciptionType;
+    private Long IdSubsciptionType;
 
     private double amount;
     private String duration;

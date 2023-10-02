@@ -8,7 +8,7 @@ import java.util.List;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String IdCategory;
+    private Long IdCategory;
     private String name;
     @OneToMany(mappedBy = "Category")
 
